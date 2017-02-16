@@ -31,10 +31,23 @@ public class PoolConductoresTest {
 	
 	@Test
 	public void testAsignarConductor() {
+		System.out.println("-----TEST ELEGIDO UN CONDUCTOR ALEATORIO-----");
 		Conductor obtenido = plantilla.asignarConductor();
 		//Deberia aparecer un nombre distinto en cada ejecucion de manera aleatoria
 		System.out.println(obtenido.getNombre());
 		assertTrue(obtenido.isOcupado());
+	}
+	
+	@Test
+	public void testAsignarConductorNoDisponible() {
+		System.out.println("-----TEST NO QUEDAN CONDUCTORES-----");
+		Conductor ocupado = new Conductor("Nanai");
+		ocupado.setOcupado(true);
+		ArrayList<Conductor> vagosYocupados = new ArrayList<>();
+		vagosYocupados.add(ocupado);
+		
+		PoolConductores vagos = new PoolConductores(vagosYocupados);
+		vagos.asignarConductor();
 	}
 
 }
