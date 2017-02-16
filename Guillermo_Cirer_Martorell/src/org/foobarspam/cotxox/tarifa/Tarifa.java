@@ -14,13 +14,14 @@ public class Tarifa {
 	private short id = 0;
 	private static double costeMilla = 1.35;
 	private static double costeMinuto = 0.35;
-	private double costeMinimo = 5;
-	private double porcentajeComision = 0.20;
+	private static double costeMinimo = 5.0;
+	private static double porcentajeComision = 0.20;
 	private Carrera carrera = null;
 	
 	//constructor
 	public Tarifa() {
 	}
+
 	
 	//metodos
 	public static double getCosteDistancia(double distancia) {
@@ -32,7 +33,11 @@ public class Tarifa {
 	}
 	
 	public static double getCosteTotalEsperado(double distancia, int minutos) {
-		return getCosteDistancia(distancia)+getCosteTiempo(minutos);
+		double costeTotal = getCosteDistancia(distancia)+getCosteTiempo(minutos);
+		if (costeTotal < costeMinimo) {
+			return costeMinimo;
+		}
+		return costeTotal;
 	}
 
 
