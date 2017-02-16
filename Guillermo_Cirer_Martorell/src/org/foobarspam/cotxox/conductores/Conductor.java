@@ -9,6 +9,7 @@ public class Conductor {
 	private String matricula = null;
 	private String modelo = null;
 	private ArrayList<Byte> valoraciones = new ArrayList<>();
+	private boolean ocupado = false;
 	
 	//constructores
 	public Conductor(String nombre) {
@@ -27,11 +28,23 @@ public class Conductor {
 	public void setValoracion(byte estrellas) {
 		valoraciones.add(estrellas);
 	}
+	
+	public void setOcupado(boolean estado) {
+		this.ocupado = estado;
+	}
 
 	
 	//getters
 	public ArrayList<Byte> getValoraciones() {
 		return this.valoraciones;
+	}
+	
+	public boolean estaOcupado() {
+		return this.ocupado;
+	}
+	
+	public String getNombre() {
+		return this.nombre;
 	}
 	
 }
