@@ -34,7 +34,7 @@ public class PoolConductoresTest {
 		Conductor obtenido = plantilla.asignarConductor();
 		//Deberia aparecer un nombre distinto en cada ejecucion de manera aleatoria
 		System.out.println(obtenido.getNombre());
-		assertTrue(obtenido.estaOcupado());
+		assertTrue(obtenido.isOcupado());
 	}
 
 }

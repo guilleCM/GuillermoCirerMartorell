@@ -39,7 +39,7 @@ public class PoolConductores {
 	private boolean hayConductoresLibres() {
 		boolean libres = false;
 		for (Conductor conductor : poolConductores) {
-			if (conductor.estaOcupado() == false) {
+			if (conductor.isOcupado() == false) {
 				return true;
 			}
 		}
@@ -47,6 +47,6 @@ public class PoolConductores {
 	}
 	
 	private boolean conductorEstaOcupado(int conductor) {
-		return poolConductores.get(conductor).estaOcupado();
+		return poolConductores.get(conductor).isOcupado();
 	}
 }
