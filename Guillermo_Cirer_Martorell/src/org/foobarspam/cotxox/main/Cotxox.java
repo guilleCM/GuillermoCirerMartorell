@@ -84,7 +84,7 @@ public class Cotxox {
 		System.out.println("Driver: " + carrera.getConductor().getNombre());
 		System.out.println("Type: " + carrera.getConductor().getModelo());
 		System.out.println("Matricula: " + carrera.getConductor().getMatricula());
-		System.out.println("Stars: " + carrera.getConductor().getValoracion());
+		System.out.println("Stars: " + carrera.getConductor().getValoracionMedia());
 		System.out.println("From: " + carrera.getOrigen());
 		System.out.println("To: " + carrera.getDestino());
 		boolean ocupado = carrera.getConductor().isOcupado();
@@ -111,11 +111,11 @@ public class Cotxox {
 		System.out.println("Ocupado?: " + carrera.getConductor().isOcupado());
 		
 		
-//		System.out.println("\n#####"  + "\t Rate your driver: \t" + "#####\n" );
-//		
-//		carrera.getConductor().setValoracion((byte) 5);
-//		
-//		System.out.println("Driver: " + carrera.getConductor().getNombre());
-//		System.out.println("Stars: " + carrera.getConductor().getValoracion());
+		System.out.println("\n#####"  + "\t Rate your driver: \t" + "#####\n" );
+		
+		carrera.getConductor().setValoracion((byte) 5);
+		
+		System.out.println("Driver: " + carrera.getConductor().getNombre());
+		System.out.println("Stars: " + carrera.getConductor().getValoracionMedia());
 	}
 }
