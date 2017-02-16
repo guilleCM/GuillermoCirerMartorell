@@ -3,6 +3,9 @@ package org.foobarspam.cotxox.tarifa;
 import org.foobarspam.cotxox.carrera.Carrera;
 
 public class Tarifa {
+	
+	//Propiedades
+	
 //	id = identificador de la bicicleta: un número de tres dígitos.
 //	costeMilla Cotxox fija en 1.35€ el coste de la milla.
 //	costeMinuto Cotxox fija en 0.35€ el coste del minuto.
@@ -15,9 +18,11 @@ public class Tarifa {
 	private double porcentajeComision = 0.20;
 	private Carrera carrera = null;
 	
+	//constructor
 	public Tarifa() {
 	}
 	
+	//metodos
 	public static double getCosteDistancia(double distancia) {
 		return costeMilla*distancia;
 	}
@@ -29,7 +34,6 @@ public class Tarifa {
 	public static double getCosteTotalEsperado(double distancia, int minutos) {
 		return getCosteDistancia(distancia)+getCosteTiempo(minutos);
 	}
-//	getCosteTotalEsperado(carrera) devuelve el coste total esperado
-//	de la carrera que recibe en función de la distancia esperada
+
 
 }
