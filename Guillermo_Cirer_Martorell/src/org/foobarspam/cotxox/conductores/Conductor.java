@@ -56,7 +56,7 @@ public class Conductor {
 		return this.matricula;
 	}
 	
-	public double getValoracionMedia() {
+	public double getValoracion() {
 		return this.valoracionMedia;
 	}
 	
